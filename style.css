@@ -1,0 +1,75 @@
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+}
+.header {
+  text-align: center;
+  padding: 40px 20px;
+}
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+.logo-icon {
+  background: white;
+  color: black;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 10px;
+}
+.logo-text, .logo-steel {
+  font-size: 28px;
+  margin-left: 5px;
+}
+.btn {
+  padding: 12px 24px;
+  background: #007aff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 20px;
+}
+.why-us, .catalog, .bonus, .form-section {
+  padding: 40px 20px;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  width: 240px;
+  border-radius: 8px;
+  text-align: center;
+}
+.card img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+.order-btn {
+  margin-top: 10px;
+  display: inline-block;
+  background: #007aff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+}
