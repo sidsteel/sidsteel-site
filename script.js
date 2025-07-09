@@ -1,17 +1,50 @@
+// Конфигурация цен
+const PRICE_CONFIG = {
+  base: 11299,
+  sizePrices: {
+    '450': 0,
+    '500': 500,
+    '600': 1000,
+    '700': 1500
+  },
+  holesPrices: {
+    '0': 0,
+    '1': 500,
+    '2': 1000,
+    '3': 1500
+  }
+};
 
-function openPopup(modelName) {
-  document.getElementById("popupForm").style.display = "block";
-  document.getElementById("productInput").value = "Модель: " + modelName;
+// Обновление цены
+function updatePrice() {
+  const size = document.getElementById('sizeSelect').value;
+  const holes = document.getElementById('holesSelect').value;
+  
+  const totalPrice = PRICE_CONFIG.base + 
+                    PRICE_CONFIG.sizePrices[size] + 
+                    PRICE_CONFIG.holesPrices[holes];
+  
+  document.getElementById('productPrice').textContent = 
+    formatPrice(totalPrice);
 }
-function closePopup() {
-  document.getElementById("popupForm").style.display = "none";
+
+// Форматирование цены
+function formatPrice(price) {
+  return new Intl.NumberFormat('ru-RU').format(price) + ' ₽';
 }
-document.getElementById("orderForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  this.style.display = "none";
-  document.querySelector(".success").style.display = "block";
-  document.querySelector(".telegram-link").style.display = "block";
-});
-document.getElementById("openForm").addEventListener("click", function () {
-  openPopup("Без выбора");
+
+// Смена изображения при выборе цвета
+function changeProductImage(color) {
+  const mainImage = document.getElementById('mainProductImage');
+  mainImage.src = `images/${color}.jpg`;
+}
+
+// Инициализация
+document.addEventListener('DOMContentLoaded', function() {
+  updatePrice();
+  
+  // Обработчик кнопки заказа
+  document.querySelector('.order-btn').addEventListener('click', function() {
+    alert('Заказ оформлен! Мы свяжемся с вами в ближайшее время.');
+  });
 });
