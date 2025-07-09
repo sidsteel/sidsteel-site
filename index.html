@@ -1,131 +1,91 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SidSteel</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-</link></head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SidSteel - Мойки премиум-класса</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<div class="background-overlay"></div>
-<header class="header" data-aos="fade-down">
-<div class="logo"><span class="circle">SID</span><span class="steel">STEEL</span></div>
-<h1>Нержавеющие мойки с PVD-покрытием — премиум-качество и полный комплект в одном решении</h1>
-<button onclick="openPopup('Без выбора')">Оставить заявку</button>
-</header>
-<div class="gift"><h3>🎁 Полный комплект от SidSteel — продумано до мелочей и без лишних затрат</h3><p>Сетка для мытья овощей и фруктов + дозатор в комплекте</p></div>
-<section class="catalog" data-aos="fade-up">
-<h2>Каталог</h2>
-<div class="cards">
-<div class="card" data-aos="zoom-in" data-aos-delay="0">
-<div class="img-placeholder">ERT-01</div>
-<p class="name">ERT-01</p>
-<p class="color">Цвет: Бронза</p>
-<button onclick="openPopup('ERT-01')">Заказать</button>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="100">
-<div class="img-placeholder">ERT-02</div>
-<p class="name">ERT-02</p>
-<p class="color">Цвет: Бронза</p>
-<button onclick="openPopup('ERT-02')">Заказать</button>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="200">
-<div class="img-placeholder">ERT-03</div>
-<p class="name">ERT-03</p>
-<p class="color">Цвет: Бронза</p>
-<button onclick="openPopup('ERT-03')">Заказать</button>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="300">
-<div class="img-placeholder">ERT-04</div>
-<p class="name">ERT-04</p>
-<p class="color">Цвет: Бронза</p>
-<button onclick="openPopup('ERT-04')">Заказать</button>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="400">
-<div class="img-placeholder">ERT-05</div>
-<p class="name">ERT-05</p>
-<p class="color">Цвет: Бронза</p>
-<button onclick="openPopup('ERT-05')">Заказать</button>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="500">
-<div class="img-placeholder">ERT-06</div>
-<p class="name">ERT-06</p>
-<p class="color">Цвет: Бронза</p>
-<button onclick="openPopup('ERT-06')">Заказать</button>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="600">
-<div class="img-placeholder">ERT-07</div>
-<p class="name">ERT-07</p>
-<p class="color">Цвет: Бронза</p>
-<button onclick="openPopup('ERT-07')">Заказать</button>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="700">
-<div class="img-placeholder">ERT-08</div>
-<p class="name">ERT-08</p>
-<p class="color">Цвет: Бронза</p>
-<button onclick="openPopup('ERT-08')">Заказать</button>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="800">
-<div class="img-placeholder">ERT-09</div>
-<p class="name">ERT-09</p>
-<p class="color">Цвет: Бронза</p>
-<button onclick="openPopup('ERT-09')">Заказать</button>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="900">
-<div class="img-placeholder">ERT-010</div>
-<p class="name">ERT-010</p>
-<p class="color">Цвет: Бронза</p>
-<button onclick="openPopup('ERT-010')">Заказать</button>
-</div>
-</div>
-</section>
-<div class="popup" id="popupForm">
-<div class="popup-content">
-<span class="close" onclick="closePopup()">×</span>
-<h2>Оформить заказ</h2>
-<form id="orderForm">
-<input placeholder="Ваше имя" required="" type="text"/>
-<input placeholder="Телефон" required="" type="tel"/>
-<input placeholder="Город (необязательно)" type="text"/>
-<select id="modelSelect" required="">
-<option disabled="" selected="" value="">Выберите модель</option>
-<option value="ERT-01">ERT-01</option>
-<option value="ERT-02">ERT-02</option>
-<option value="ERT-03">ERT-03</option>
-<option value="ERT-04">ERT-04</option>
-<option value="ERT-05">ERT-05</option>
-<option value="ERT-06">ERT-06</option>
-<option value="ERT-07">ERT-07</option>
-<option value="ERT-08">ERT-08</option>
-<option value="ERT-09">ERT-09</option>
-<option value="ERT-10">ERT-10</option>
-</select>
-<button type="submit">Отправить</button>
-</form>
-<p class="success" style="display:none;">✅ Заявка отправлена!</p>
-<p class="telegram-link" style="display:none; margin-top: 1rem;">
-  🔔 Перейдите в бот, чтобы отслеживать статус:
-  <br/>
-<a class="tg-button" href="https://t.me/SidStill_bot" target="_blank">Перейти в Telegram</a>
-</p>
-</div>
-</div>
-<footer data-aos="fade-up">
-<div class="contacts">
-<a href="https://t.me/SidStill_bot" style="margin-right: 10px;" target="_blank">
-<img alt="Telegram" src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="24"/>
-</a>
-<a href="https://wa.me/79137244426" target="_blank">
-<img alt="WhatsApp" src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="24"/>
-</a>
-</div>
-<p style="margin-top: 0.5rem;">© 2025 SIDSTEEL</p>
-</footer>
-<script src="script.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
+  <div class="background-overlay"></div>
+  
+  <header class="header">
+    <div class="logo">
+      <span class="circle">SID</span>
+      <span class="steel">STEEL</span>
+    </div>
+    <h1>Нержавеющие мойки с PVD-покрытием</h1>
+  </header>
+
+  <main class="product-container">
+    <div class="product-card">
+      <!-- Основное изображение и выбор цвета -->
+      <div class="product-image">
+        <img src="images/IMG_9545.jpeg" alt="Мойка SidSteel" id="mainProductImage">
+        <div class="color-switcher">
+          <button onclick="changeProductImage('satin')">Сатин</button>
+          <button onclick="changeProductImage('graphite')">Графит</button>
+        </div>
+      </div>
+      
+      <!-- Блок характеристик -->
+      <div class="product-details">
+        <h2>Мойка Premium Line</h2>
+        
+        <!-- Блок с вашими изображениями характеристик -->
+        <div class="features-grid">
+          <div class="feature-item">
+            <img src="images/IMG_9546.jpeg" alt="Покрытие">
+            <p>Многослойное защитное покрытие</p>
+          </div>
+          <div class="feature-item">
+            <img src="images/IMG_9545.jpeg" alt="Конструкция">
+            <p>Прочная конструкция</p>
+          </div>
+        </div>
+
+        <!-- Выбор параметров -->
+        <div class="options">
+          <div class="option-group">
+            <label>Размер:</label>
+            <select id="sizeSelect" onchange="updatePrice()">
+              <option value="450">450×450 мм</option>
+              <option value="500">500×450 мм</option>
+              <option value="600">600×450 мм</option>
+              <option value="700">700×450 мм</option>
+            </select>
+          </div>
+          
+          <div class="option-group">
+            <label>Отверстия:</label>
+            <select id="holesSelect" onchange="updatePrice()">
+              <option value="0">0 (без отверстий)</option>
+              <option value="1">1 отверстие</option>
+              <option value="2">2 отверстия</option>
+              <option value="3">3 отверстия</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Цена -->
+        <div class="price-box">
+          <span class="price" id="productPrice">11 299 ₽</span>
+          <span class="price-note">от 11 299 до 14 299 ₽</span>
+        </div>
+
+        <!-- Кнопка заказа -->
+        <button class="order-btn">Заказать</button>
+
+        <!-- Дополнительные изображения -->
+        <div class="additional-images">
+          <img src="images/IMG_9548.jpeg" alt="Комплектация">
+          <img src="images/IMG_9549.jpeg" alt="Преимущества">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
