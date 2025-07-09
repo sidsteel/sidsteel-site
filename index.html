@@ -3,88 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SidSteel - Мойки премиум-класса</title>
+  <title>SidSteel - Мойки Premium Line</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="background-overlay"></div>
   
-  <header class="header">
-    <div class="logo">
-      <span class="circle">SID</span>
-      <span class="steel">STEEL</span>
+  <div class="product-card">
+    <!-- Основное изображение мойки -->
+    <img src="images/IMG_9545.jpeg" alt="Мойка Premium Line" class="main-image">
+    
+    <!-- Заголовок и описание -->
+    <div class="product-title">Мойка Premium Line</div>
+    <div class="product-description">
+      Многослойное защитное покрытие<br>
+      Прочная конструкция
     </div>
-    <h1>Нержавеющие мойки с PVD-покрытием</h1>
-  </header>
-
-  <main class="product-container">
-    <div class="product-card">
-      <!-- Основное изображение и выбор цвета -->
-      <div class="product-image">
-        <img src="images/IMG_9545.jpeg" alt="Мойка SidSteel" id="mainProductImage">
-        <div class="color-switcher">
-          <button onclick="changeProductImage('satin')">Сатин</button>
-          <button onclick="changeProductImage('graphite')">Графит</button>
-        </div>
+    
+    <!-- Выбор параметров -->
+    <div class="options">
+      <div class="option">
+        <label>Размер:</label>
+        <select id="size">
+          <option value="450">450×450 мм</option>
+          <option value="500" selected>500×450 мм</option>
+          <option value="600">600×450 мм</option>
+          <option value="700">700×450 мм</option>
+        </select>
       </div>
       
-      <!-- Блок характеристик -->
-      <div class="product-details">
-        <h2>Мойка Premium Line</h2>
-        
-        <!-- Блок с вашими изображениями характеристик -->
-        <div class="features-grid">
-          <div class="feature-item">
-            <img src="images/IMG_9546.jpeg" alt="Покрытие">
-            <p>Многослойное защитное покрытие</p>
-          </div>
-          <div class="feature-item">
-            <img src="images/IMG_9545.jpeg" alt="Конструкция">
-            <p>Прочная конструкция</p>
-          </div>
-        </div>
-
-        <!-- Выбор параметров -->
-        <div class="options">
-          <div class="option-group">
-            <label>Размер:</label>
-            <select id="sizeSelect" onchange="updatePrice()">
-              <option value="450">450×450 мм</option>
-              <option value="500">500×450 мм</option>
-              <option value="600">600×450 мм</option>
-              <option value="700">700×450 мм</option>
-            </select>
-          </div>
-          
-          <div class="option-group">
-            <label>Отверстия:</label>
-            <select id="holesSelect" onchange="updatePrice()">
-              <option value="0">0 (без отверстий)</option>
-              <option value="1">1 отверстие</option>
-              <option value="2">2 отверстия</option>
-              <option value="3">3 отверстия</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Цена -->
-        <div class="price-box">
-          <span class="price" id="productPrice">11 299 ₽</span>
-          <span class="price-note">от 11 299 до 14 299 ₽</span>
-        </div>
-
-        <!-- Кнопка заказа -->
-        <button class="order-btn">Заказать</button>
-
-        <!-- Дополнительные изображения -->
-        <div class="additional-images">
-          <img src="images/IMG_9548.jpeg" alt="Комплектация">
-          <img src="images/IMG_9549.jpeg" alt="Преимущества">
-        </div>
+      <div class="option">
+        <label>Отверстия:</label>
+        <select id="holes">
+          <option value="0">0 отверстий</option>
+          <option value="1">1 отверстие</option>
+          <option value="2" selected>2 отверстия</option>
+          <option value="3">3 отверстия</option>
+        </select>
       </div>
     </div>
-  </main>
+    
+    <!-- Цена -->
+    <div class="price-container">
+      <div class="price" id="price">12 799 ₽</div>
+      <div class="price-range">от 11 299 до 14 299 ₽</div>
+    </div>
+    
+    <!-- Кнопка заказа -->
+    <button class="order-btn" onclick="openPopup()">Заказать</button>
+  </div>
+  
+  <!-- Попап форма -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">×</span>
+      <h2>Оформить заказ</h2>
+      <form id="orderForm">
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="tel" placeholder="Телефон" required>
+        <input type="text" placeholder="Город (необязательно)">
+        <button type="submit">Отправить</button>
+      </form>
+      <div class="success-message" id="successMessage">
+        ✅ Заказ успешно создан!<br>
+        Для отслеживания статуса перейдите в наш Telegram-бот
+        <a href="https://t.me/SidStill_bot" target="_blank" class="tg-link">Перейти в Telegram</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Футер с контактами -->
+  <footer>
+    <div class="social-links">
+      <a href="https://t.me/SidStill_bot" target="_blank">
+        <img src="images/telegram-icon.png" alt="Telegram">
+      </a>
+      <a href="https://wa.me/79137244426" target="_blank">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp">
+      </a>
+    </div>
+    <p>© 2024 SidSteel</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
